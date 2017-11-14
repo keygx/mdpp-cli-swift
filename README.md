@@ -2,11 +2,11 @@
 
 Search .mobileprovision file from '~/Library/MobileDevice/Provisioning Profiles/' directory
 
-##Requirements
+## Requirements
 - macOS
 - Swift 4.0
 
-##Install
+## Install
 
 ```
 $ git clone https://github.com/keygx/mdpp-cli-swift.git
@@ -17,13 +17,13 @@ $ make install
 $ mdpp help
 ```
 
-##Uninstall
+## Uninstall
 
 ```
 $ make uninstall
 ```
 
-##Usage
+## Usage
 
 ```
 USAGE:
@@ -50,7 +50,7 @@ OPTIONS:
     --move      cleanup --move   : Move to temp folder. ex. ~/Desktop/Expired-Profiles-YYYYMMdd-HHmmss/
 ```
 
-##Example
+## Example
 
 For example, set the current date and time to 2017/10/06
 
