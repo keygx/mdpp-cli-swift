@@ -1,5 +1,5 @@
 build:
-	swift build --configuration release -Xswiftc -static-stdlib
+	swift build --configuration release
 
 clean:
 	swift package clean

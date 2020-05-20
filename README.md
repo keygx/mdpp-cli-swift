@@ -3,8 +3,9 @@
 Search .mobileprovision file from '~/Library/MobileDevice/Provisioning Profiles/' directory
 
 ## Requirements
+
 - macOS
-- Swift 4.0
+- Swift 5
 
 ## Install
 
@@ -13,6 +14,7 @@ $ git clone https://github.com/keygx/mdpp-cli-swift.git
 $ cd mdpp-cli-swift
 $ make install
 ```
+
 ```
 $ mdpp help
 ```
@@ -28,7 +30,7 @@ $ make uninstall
 ```
 USAGE:
     mdpp commands [options] [arguments...]
-    
+
 EXAMPLE:
     mdpp cleanup [ --delete | --move ]
     mdpp expired
@@ -36,7 +38,7 @@ EXAMPLE:
     mdpp list
     mdpp search [ profile name | keyword ]
     mdpp version
-    
+
 COMMANDS:
     cleanup   Move or delete, expired profiles or old profiles.
     expired   List the expired profiles.
@@ -44,7 +46,7 @@ COMMANDS:
     list      List the installed profiles.
     search    List search results from profile name or keywords.
     version   Display version.
-    
+
 OPTIONS:
     --delete    cleanup --delete : Delete. (Default)
     --move      cleanup --move   : Move to temp folder. ex. ~/Desktop/Expired-Profiles-YYYYMMdd-HHmmss/
@@ -81,6 +83,7 @@ ModifiedDate:   2017-10-02 06:48:57 +0000
 
 
 ```
+
 ```
 keygx@Mac:~$ mdpp search Foo
 -------------------------------
@@ -94,6 +97,7 @@ ModifiedDate:   2017-07-27 13:26:28 +0000
 
 
 ```
+
 ```
 keygx@Mac:~$ mdpp expired
 -------------------------------
@@ -114,6 +118,7 @@ ModifiedDate:   2016-07-12 09:35:34 +0000
 
 
 ```
+
 ```
 keygx@Mac:~$ mdpp cleanup
 -------------------------------

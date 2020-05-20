@@ -21,7 +21,7 @@ enum Command: String {
 }
 
 struct Config {
-    static let version: String = "1.0.0"
+    static let version: String = "1.0.1"
     
     static let provisioningDir: String = "/Library/MobileDevice/Provisioning Profiles/"
     static let provisioningExt: String = ".mobileprovision"
