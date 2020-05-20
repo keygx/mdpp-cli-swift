@@ -7,7 +7,7 @@
 
 import Foundation
 
-class File {
+final class File {
     static let fileManager = FileManager.default
     
     static func list() -> [String]? {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FileListFilter {
+final class FileListFilter {
     static func sorttedByProfileName(provisions: [MobileProvision]) -> [MobileProvision] {
         return provisions.sorted { $0.profileName.lowercased() < $1.profileName.lowercased() }
     }
@@ -25,11 +25,11 @@ class FileListFilter {
         return overlapped.sorted()
     }
     
-    static func olderExpirationDate(profileNames: [String]) -> [MobileProvision] {
+    static func compareModifiedDate(profileNames: [String]) -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
         for profileName in profileNames {
-            let searched = Search.execute(keyword: profileName)
+            let searched = Search.execute(keyword: profileName, option: Command.OptionReturnList.none)
             let sorded = searched.sorted(by: { $1.expiration < $0.expiration })
             provisions += Array(sorded.dropFirst())
         }

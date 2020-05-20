@@ -7,4 +7,4 @@
 
 import Foundation
 
-_ = Root(args: CommandLine.arguments)
+_ = Loader(args: CommandLine.arguments)

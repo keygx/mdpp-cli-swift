@@ -12,7 +12,7 @@ enum Tag: String {
     case expiration = "<key>ExpirationDate</key>"
 }
 
-class ProvisioningProfile {
+final class ProvisioningProfile {
     static let pattern = "<(\"[^\"]*\"|'[^']*'|[^'\">])*>"
     
     static func search(path: String, tag: Tag) -> String {

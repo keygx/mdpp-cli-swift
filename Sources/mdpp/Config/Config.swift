@@ -7,21 +7,8 @@
 
 import Foundation
 
-enum Command: String {
-    case cleanup = "cleanup"
-    case expired = "expired"
-    case list    = "list"
-    case search  = "search"
-    case version = "version"
-    
-    enum Option: String {
-        case delete = "--delete"
-        case move   = "--move"
-    }
-}
-
 struct Config {
-    static let version: String = "1.0.1"
+    static let version: String = "1.1.0"
     
     static let provisioningDir: String = "/Library/MobileDevice/Provisioning Profiles/"
     static let provisioningExt: String = ".mobileprovision"

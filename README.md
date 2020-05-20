@@ -30,15 +30,15 @@ $ make uninstall
 ```
 USAGE:
     mdpp commands [options] [arguments...]
-
+    
 EXAMPLE:
     mdpp cleanup [ --delete | --move ]
-    mdpp expired
+    mdpp expired [ --path ]
     mdpp help
-    mdpp list
-    mdpp search [ profile name | keyword ]
+    mdpp list [ --path ]
+    mdpp search [ profile name | keyword ] [ --path ]
     mdpp version
-
+    
 COMMANDS:
     cleanup   Move or delete, expired profiles or old profiles.
     expired   List the expired profiles.
@@ -46,10 +46,13 @@ COMMANDS:
     list      List the installed profiles.
     search    List search results from profile name or keywords.
     version   Display version.
-
+    
 OPTIONS:
     --delete    cleanup --delete : Delete. (Default)
     --move      cleanup --move   : Move to temp folder. ex. ~/Desktop/Expired-Profiles-YYYYMMdd-HHmmss/
+    --path      expired --path   : Output only file path
+                list --path      : Output only file path
+                search [ keyword ] --path : Output only file path
 ```
 
 ## Example

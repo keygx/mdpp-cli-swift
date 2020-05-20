@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Help {
+final class Help {
     static func execute() -> String {
         let help = """
         OVERVIEW:
@@ -18,10 +18,10 @@ class Help {
         
         EXAMPLE:
             mdpp cleanup [ --delete | --move ]
-            mdpp expired
+            mdpp expired [ --path ]
             mdpp help
-            mdpp list
-            mdpp search [ profile name | keyword ]
+            mdpp list [ --path ]
+            mdpp search [ profile name | keyword ] [ --path ]
             mdpp version
         
         COMMANDS:
@@ -35,6 +35,9 @@ class Help {
         OPTIONS:
             --delete    cleanup --delete : Delete. (Default)
             --move      cleanup --move   : Move to temp folder. ex. ~/Desktop/Expired-Profiles-YYYYMMdd-HHmmss/
+            --path      expired --path   : Output only file path
+                        list --path      : Output only file path
+                        search [ keyword ] --path : Output only file path
         
         VERSION:
             \(Config.version)

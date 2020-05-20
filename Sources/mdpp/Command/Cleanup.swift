@@ -7,12 +7,12 @@
 
 import Foundation
 
-class Cleanup {
-    static func execute(option: Command.Option) -> [MobileProvision] {
+final class Cleanup {
+    static func execute(option: Command.OptionCleanup) -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
         // Expired
-        provisions += Expired.execute()
+        provisions += Expired.execute(option: Command.OptionReturnList.none)
         // Overlapped
         provisions += Overlapped.execute()
         
@@ -23,6 +23,7 @@ class Cleanup {
                 provisions = delete(provisions: provisions)
             case .move:
                 provisions = move(provisions: provisions)
+            default: break
             }
         }
         

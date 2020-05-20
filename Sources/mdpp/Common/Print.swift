@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Print {
+final class Print {
     static func f(_ provisions: [MobileProvision]) {
         for provision in provisions {
             stdOutput(text: provisonParamsFormatted(provision: provision))
@@ -16,6 +16,12 @@ class Print {
         let formatted = fileCountFormatted(count: provisions.count)
         if !formatted.isEmpty {
             stdOutput(text: formatted)
+        }
+    }
+    
+    static func filePath(_ provisions: [MobileProvision]) {
+        for provision in provisions {
+            stdOutput(text: provision.filePath)
         }
     }
     

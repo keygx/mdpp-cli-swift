@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CmdLine {
+final class CmdLine {
     static func execute(cmd: String, args: [String]) -> String {
         let process: Process = Process()
         let pipe: Pipe = Pipe()

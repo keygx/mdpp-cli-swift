@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Version {
+final class Version {
     static func execute() -> String {
         return Config.version
     }

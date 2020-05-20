@@ -7,15 +7,15 @@
 
 import Foundation
 
-class Overlapped {
+final class Overlapped {
     static func execute() -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
-        let list = List.execute()
+        let list = List.execute(option: Command.OptionReturnList.none)
         let overlappedProfileNames = FileListFilter.overlapped(provisions: list)
         
         if !overlappedProfileNames.isEmpty {
-            provisions = FileListFilter.olderExpirationDate(profileNames: overlappedProfileNames)
+            provisions = FileListFilter.compareModifiedDate(profileNames: overlappedProfileNames)
         }
         
         return FileListFilter.sorttedByProfileName(provisions: provisions)

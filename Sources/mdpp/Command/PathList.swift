@@ -1,13 +1,13 @@
 //
-//  List.swift
+//  PathList.swift
 //  mdpp
 //
-//  Created by keygx on 2017/09/29.
+//  Created by keygx on 2018/09/03.
 //
 
 import Foundation
 
-final class List {
+final class PathList {
     static func execute(option: Command.OptionReturnList) -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
