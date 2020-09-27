@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MobileProvision {
+struct MobileProvision: Codable {
     let profileName: String
     let fileName: String
     let filePath: String

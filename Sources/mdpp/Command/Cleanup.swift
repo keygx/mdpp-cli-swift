@@ -12,7 +12,7 @@ final class Cleanup {
         var provisions = [MobileProvision]()
         
         // Expired
-        provisions += Expired.execute(option: Command.OptionReturnList.none)
+        provisions += Expired.execute()
         // Overlapped
         provisions += Overlapped.execute()
         

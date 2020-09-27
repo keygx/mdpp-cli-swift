@@ -18,10 +18,10 @@ final class Help {
         
         EXAMPLE:
             mdpp cleanup [ --delete | --move ]
-            mdpp expired [ --path ]
+            mdpp expired [ --path | --json ]
             mdpp help
-            mdpp list [ --path ]
-            mdpp search [ profile name | keyword ] [ --path ]
+            mdpp list [ --path | --json ]
+            mdpp search [ profile name | keyword ] [ --path | --json ]
             mdpp version
         
         COMMANDS:
@@ -38,6 +38,9 @@ final class Help {
             --path      expired --path   : Output only file path
                         list --path      : Output only file path
                         search [ keyword ] --path : Output only file path
+            --json      expired --json   : Output JSON format
+                        list --json      : Output JSON format
+                        search [ keyword ] --json : Output JSON format
         
         VERSION:
             \(Config.version)

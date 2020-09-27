@@ -8,7 +8,7 @@
 import Foundation
 
 struct Config {
-    static let version: String = "1.1.0"
+    static let version: String = "1.2.0"
     
     static let provisioningDir: String = "/Library/MobileDevice/Provisioning Profiles/"
     static let provisioningExt: String = ".mobileprovision"
@@ -27,5 +27,6 @@ struct Config {
     
     static let expirationDateFormat: String = "YYYY-MM-dd'T'HH:mm:ssZ"
     static let destinationDirDateFormat: String = "YYYYMMdd-HHmmss"
+    static let outputJSONDateFormat: String = "YYYY-MM-dd'T'HH:mm:ssZ"
     static let localeId: String = "en_US_POSIX"
 }
