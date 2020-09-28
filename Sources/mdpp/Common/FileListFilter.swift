@@ -29,7 +29,7 @@ final class FileListFilter {
         var provisions = [MobileProvision]()
         
         for profileName in profileNames {
-            let searched = Search.execute(keyword: profileName, option: Command.OptionReturnList.none)
+            let searched = Search.execute(keyword: profileName)
             let sorded = searched.sorted(by: { $1.expiration < $0.expiration })
             provisions += Array(sorded.dropFirst())
         }

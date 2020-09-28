@@ -53,6 +53,9 @@ OPTIONS:
     --path      expired --path   : Output only file path
                 list --path      : Output only file path
                 search [ keyword ] --path : Output only file path
+    --json      expired --json   : Output JSON format
+                list --json      : Output JSON format
+                search [ keyword ] --json : Output JSON format
 ```
 
 ## Example

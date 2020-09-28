@@ -25,6 +25,25 @@ final class Print {
         }
     }
     
+    static func json(_ provisions: [MobileProvision]) {
+        let encoder = JSONEncoder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Config.outputJSONDateFormat
+        encoder.dateEncodingStrategy = .formatted(dateFormatter)
+        
+        guard let data = try? encoder.encode(["provisions": provisions]) else { return }
+        let json = String(data: data, encoding: .utf8)!
+        stdOutput(text: json)
+    }
+}
+
+extension Print {
+    static func stdOutput(text: String) {
+        print(text)
+    }
+}
+
+extension Print {
     static func provisonParamsFormatted(provision: MobileProvision) -> String {
         let formatted = """
         -------------------------------
@@ -50,9 +69,5 @@ final class Print {
         """
         
         return formatted
-    }
-    
-    static func stdOutput(text: String) {
-        print(text)
     }
 }

@@ -30,14 +30,18 @@ final class Action {
     static func expired(args: [String]) {
         if args.count < 2 {
             // mdpp expired
-            Print.f(Expired.execute(option: Command.OptionReturnList.none))
+            Print.f(Expired.execute())
             return
         }
         
         switch args[1] {
         case Command.OptionReturnList.path.rawValue:
             // mdpp expired --path
-            Print.filePath(Expired.execute(option: Command.OptionReturnList.path))
+            Print.filePath(Expired.execute())
+        case Command.OptionReturnList.json.rawValue:
+            // mdpp expired --json
+            Print.json(Expired.execute())
+            break
         default:
             Action.default()
         }
@@ -46,14 +50,17 @@ final class Action {
     static func list(args: [String]) {
         if args.count < 2 {
             // mdpp list
-            Print.f(List.execute(option: Command.OptionReturnList.none))
+            Print.f(List.execute())
             return
         }
         
         switch args[1] {
         case Command.OptionReturnList.path.rawValue:
             // mdpp list --path
-            Print.filePath(PathList.execute(option: Command.OptionReturnList.path))
+            Print.filePath(PathList.execute())
+        case Command.OptionReturnList.json.rawValue:
+            // mdpp list --json
+            Print.json(List.execute())
         default:
             Action.default()
         }
@@ -64,13 +71,19 @@ final class Action {
 
         if args.count == 2 {
             // mdpp search [ profile name | keyword ]
-            Print.f(Search.execute(keyword: args[1], option: Command.OptionReturnList.none))
+            Print.f(Search.execute(keyword: args[1]))
             return
         }
         
         if args.count == 3 && args[2] == Command.OptionReturnList.path.rawValue {
             // mdpp search [ profile name | keyword ] --path
-            Print.filePath(Search.execute(keyword: args[1], option: Command.OptionReturnList.path))
+            Print.filePath(Search.execute(keyword: args[1]))
+            return
+        }
+        
+        if args.count == 3 && args[2] == Command.OptionReturnList.json.rawValue {
+            // mdpp search [ profile name | keyword ] --json
+            Print.json(Search.execute(keyword: args[1]))
             return
         }
     }

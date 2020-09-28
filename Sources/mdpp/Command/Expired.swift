@@ -8,7 +8,7 @@
 import Foundation
 
 final class Expired {
-    static func execute(option: Command.OptionReturnList) -> [MobileProvision] {
+    static func execute() -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
         guard let files = File.list() else {

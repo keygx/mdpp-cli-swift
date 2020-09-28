@@ -8,7 +8,7 @@
 import Foundation
 
 final class PathList {
-    static func execute(option: Command.OptionReturnList) -> [MobileProvision] {
+    static func execute() -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
         guard let files = File.list() else {

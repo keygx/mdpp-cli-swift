@@ -8,7 +8,7 @@
 import Foundation
 
 final class Search {
-    static func execute(keyword: String, option: Command.OptionReturnList) -> [MobileProvision] {
+    static func execute(keyword: String) -> [MobileProvision] {
         var provisions = [MobileProvision]()
         
         guard let files = File.list() else {

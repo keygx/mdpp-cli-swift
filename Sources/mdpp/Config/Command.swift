@@ -17,6 +17,7 @@ enum Command: String {
     enum OptionReturnList: String {
         case none = ""
         case path = "--path"
+        case json = "--json"
     }
     
     enum OptionCleanup: String {
