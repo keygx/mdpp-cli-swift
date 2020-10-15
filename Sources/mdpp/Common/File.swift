@@ -10,6 +10,10 @@ import Foundation
 final class File {
     static let fileManager = FileManager.default
     
+    static func isExist(path: String) -> Bool {
+        return fileManager.fileExists(atPath: path)
+    }
+    
     static func list() -> [String]? {
         return try? fileManager.contentsOfDirectory(atPath: Config.provisioningDirPath)
     }

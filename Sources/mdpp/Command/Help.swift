@@ -21,6 +21,7 @@ final class Help {
             mdpp expired [ --path | --json ]
             mdpp help
             mdpp list [ --path | --json ]
+            mdpp open
             mdpp search [ profile name | keyword ] [ --path | --json ]
             mdpp version
         
@@ -29,6 +30,7 @@ final class Help {
             expired   List the expired profiles.
             help      Display help.
             list      List the installed profiles.
+            open      Open '~/Library/MobileDevice/Provisioning Profiles/' directory
             search    List search results from profile name or keywords.
             version   Display version.
         
