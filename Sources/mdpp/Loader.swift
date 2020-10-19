@@ -19,15 +19,17 @@ final class Loader {
     
     private func selectCommand(args: [String]) {
         switch args.first {
-        case Command.cleanup.rawValue?:
+        case Command.cleanup.rawValue:
             Action.cleanup(args: args)
-        case Command.expired.rawValue?:
+        case Command.expired.rawValue:
             Action.expired(args: args)
-        case Command.list.rawValue?:
+        case Command.list.rawValue:
             Action.list(args: args)
-        case Command.search.rawValue?:
+        case Command.open.rawValue:
+            Action.open()
+        case Command.search.rawValue:
             Action.search(args: args)
-        case Command.version.rawValue?:
+        case Command.version.rawValue:
             Action.version()
         default:
             Action.default()

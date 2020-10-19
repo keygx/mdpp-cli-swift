@@ -66,6 +66,11 @@ final class Action {
         }
     }
     
+    static func open() {
+        // open directory
+        Print.stdOutput(text: Open.execute())
+    }
+    
     static func search(args: [String]) {
         if args.count < 2 { return } // mdpp search
 

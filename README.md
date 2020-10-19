@@ -30,23 +30,25 @@ $ make uninstall
 ```
 USAGE:
     mdpp commands [options] [arguments...]
-    
+
 EXAMPLE:
     mdpp cleanup [ --delete | --move ]
-    mdpp expired [ --path ]
+    mdpp expired [ --path | --json ]
     mdpp help
-    mdpp list [ --path ]
-    mdpp search [ profile name | keyword ] [ --path ]
+    mdpp list [ --path | --json ]
+    mdpp open
+    mdpp search [ profile name | keyword ] [ --path | --json ]
     mdpp version
-    
+
 COMMANDS:
     cleanup   Move or delete, expired profiles or old profiles.
     expired   List the expired profiles.
     help      Display help.
     list      List the installed profiles.
+    open      Open '~/Library/MobileDevice/Provisioning Profiles/' directory
     search    List search results from profile name or keywords.
     version   Display version.
-    
+
 OPTIONS:
     --delete    cleanup --delete : Delete. (Default)
     --move      cleanup --move   : Move to temp folder. ex. ~/Desktop/Expired-Profiles-YYYYMMdd-HHmmss/

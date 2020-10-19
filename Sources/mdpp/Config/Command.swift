@@ -11,6 +11,7 @@ enum Command: String {
     case cleanup = "cleanup"
     case expired = "expired"
     case list    = "list"
+    case open    = "open"
     case search  = "search"
     case version = "version"
     
