@@ -62,7 +62,7 @@ OPTIONS:
 
 ## Example
 
-For example, set the current date and time to 2017/10/06
+For example, set the current date and time to 2020/10/06
 
 ```
 keygx@Mac:~$ mdpp list
@@ -70,22 +70,22 @@ keygx@Mac:~$ mdpp list
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-ExpirationDate: 2017-08-08 05:01:36 +0000
-ModifiedDate:   2017-07-27 13:26:28 +0000
+ExpirationDate: 2021-08-08 05:01:36 +0000
+ModifiedDate:   2020-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-ExpirationDate: 2017-07-12 09:17:07 +0000
-ModifiedDate:   2016-07-12 09:35:34 +0000
+ExpirationDate: 2021-07-12 09:17:07 +0000
+ModifiedDate:   2020-07-12 09:35:34 +0000
 
 -------------------------------
 ProfileName:    Baz
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbaz.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbaz.mobileprovision
-ExpirationDate: 2018-10-02 04:54:15 +0000
-ModifiedDate:   2017-10-02 06:48:57 +0000
+ExpirationDate: 2021-10-02 04:54:15 +0000
+ModifiedDate:   2020-10-02 06:48:57 +0000
 
 ==> count: 3
 
@@ -98,8 +98,8 @@ keygx@Mac:~$ mdpp search Foo
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-ExpirationDate: 2017-08-08 05:01:36 +0000
-ModifiedDate:   2017-07-27 13:26:28 +0000
+ExpirationDate: 2021-08-08 05:01:36 +0000
+ModifiedDate:   2020-08-27 13:26:28 +0000
 
 ==> count: 1
 
@@ -112,15 +112,15 @@ keygx@Mac:~$ mdpp expired
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-ExpirationDate: 2017-08-08 05:01:36 +0000
-ModifiedDate:   2017-07-27 13:26:28 +0000
+ExpirationDate: 2020-08-08 05:01:36 +0000
+ModifiedDate:   2019-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-ExpirationDate: 2017-07-12 09:17:07 +0000
-ModifiedDate:   2016-07-12 09:35:34 +0000
+ExpirationDate: 2020-07-12 09:17:07 +0000
+ModifiedDate:   2019-07-12 09:35:34 +0000
 
 ==> count: 2
 
@@ -133,18 +133,35 @@ keygx@Mac:~$ mdpp cleanup
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-ExpirationDate: 2017-08-08 05:01:36 +0000
-ModifiedDate:   2017-07-27 13:26:28 +0000
+ExpirationDate: 2020-08-08 05:01:36 +0000
+ModifiedDate:   2019-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-ExpirationDate: 2017-07-12 09:17:07 +0000
-ModifiedDate:   2016-07-12 09:35:34 +0000
+ExpirationDate: 2020-07-12 09:17:07 +0000
+ModifiedDate:   2019-07-12 09:35:34 +0000
 
 ==> count: 2
 
+
+```
+
+For '--json' output option.
+
+```
+keygx@Mac:~$ mdpp list --json
+{"provisions":[{"modified":"2020-08-27T13:26:28+0000","profileName":"Foo","fileName":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision","expiration":"2021-08-08T05:01:36+0000","filePath":"\/Users\/keygx\/Library\/MobileDevice\/Provisioning Profiles\/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision"},{"modified":"2016-07-12T09:35:34+0000","profileName":"Bar","fileName":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision","expiration": "2017-07-12T09:17:07+0000","filePath":"\/Users\/keygx\/Library\/MobileDevice\/Provisioning Profiles\/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision"}]}
+
+```
+
+For '--path' output option.
+
+```
+keygx@Mac:~$ mdpp list --list
+/Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+/Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 
 ```
 
