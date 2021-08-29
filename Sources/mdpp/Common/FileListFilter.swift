@@ -30,7 +30,7 @@ final class FileListFilter {
         
         for profileName in profileNames {
             let searched = Search.execute(keyword: profileName)
-            let sorded = searched.sorted(by: { $1.expiration < $0.expiration })
+            let sorded = searched.sorted(by: { $1.expiration < $0.expiration || $1.modified < $0.modified })
             provisions += Array(sorded.dropFirst())
         }
         
