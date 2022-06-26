@@ -159,7 +159,7 @@ keygx@Mac:~$ mdpp list --json
 For '--path' output option.
 
 ```
-keygx@Mac:~$ mdpp list --list
+keygx@Mac:~$ mdpp list --path
 /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 
