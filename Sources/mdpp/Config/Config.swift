@@ -8,7 +8,7 @@
 import Foundation
 
 struct Config {
-    static let version: String = "1.3.1"
+    static let version: String = "1.4.0"
     
     static let provisioningDir: String = "/Library/Developer/Xcode/UserData/Provisioning Profiles/"
     static let provisioningExt: String = ".mobileprovision"
