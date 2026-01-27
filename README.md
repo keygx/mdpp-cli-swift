@@ -1,6 +1,6 @@
 # mdpp
 
-Search .mobileprovision file from '~/Library/MobileDevice/Provisioning Profiles/' directory
+Search .mobileprovision file from '~/Library/Developer/Xcode/UserData/Provisioning Profiles/' directory
 
 ## Requirements
 
@@ -45,7 +45,7 @@ COMMANDS:
     expired   List the expired profiles.
     help      Display help.
     list      List the installed profiles.
-    open      Open '~/Library/MobileDevice/Provisioning Profiles/' directory
+    open      Open '~/Library/Developer/Xcode/UserData/Provisioning Profiles/' directory
     search    List search results from profile name or keywords.
     version   Display version.
 
@@ -69,21 +69,21 @@ keygx@Mac:~$ mdpp list
 -------------------------------
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 ExpirationDate: 2021-08-08 05:01:36 +0000
 ModifiedDate:   2020-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 ExpirationDate: 2021-07-12 09:17:07 +0000
 ModifiedDate:   2020-07-12 09:35:34 +0000
 
 -------------------------------
 ProfileName:    Baz
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbaz.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbaz.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbaz.mobileprovision
 ExpirationDate: 2021-10-02 04:54:15 +0000
 ModifiedDate:   2020-10-02 06:48:57 +0000
 
@@ -97,7 +97,7 @@ keygx@Mac:~$ mdpp search Foo
 -------------------------------
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+FilePath:       /Users/keygx/Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 ExpirationDate: 2021-08-08 05:01:36 +0000
 ModifiedDate:   2020-08-27 13:26:28 +0000
 
@@ -111,14 +111,14 @@ keygx@Mac:~$ mdpp expired
 -------------------------------
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 ExpirationDate: 2020-08-08 05:01:36 +0000
 ModifiedDate:   2019-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 ExpirationDate: 2020-07-12 09:17:07 +0000
 ModifiedDate:   2019-07-12 09:35:34 +0000
 
@@ -132,14 +132,14 @@ keygx@Mac:~$ mdpp cleanup
 -------------------------------
 ProfileName:    Foo
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
 ExpirationDate: 2020-08-08 05:01:36 +0000
 ModifiedDate:   2019-08-27 13:26:28 +0000
 
 -------------------------------
 ProfileName:    Bar
 FileName:       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
-FilePath:       /Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
+FilePath:       /Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 ExpirationDate: 2020-07-12 09:17:07 +0000
 ModifiedDate:   2019-07-12 09:35:34 +0000
 
@@ -160,8 +160,8 @@ For '--path' output option.
 
 ```
 keygx@Mac:~$ mdpp list --path
-/Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
-/Users/keygx/Library/MobileDevice/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
+/Users/keygx/Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxfoo.mobileprovision
+/Users/keygx/Library/Developer/Xcode/UserData/Provisioning Profiles/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxbar.mobileprovision
 
 ```
 
