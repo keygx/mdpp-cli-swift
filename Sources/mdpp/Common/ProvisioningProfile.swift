@@ -25,7 +25,7 @@ final class ProvisioningProfile {
     }
     
     static func egrep(path: String, tag: String) -> String {
-        // ex: egrep -a -A 1 "<key>Name</key>" "/Users/[user]/Library/MobileDevice/Provisioning Profiles/********************************.mobileprovision"
+        // ex: egrep -a -A 1 "<key>Name</key>" "/Users/[user]/Library/Developer/Xcode/UserData/Provisioning Profiles/********************************.mobileprovision"
         var options = [String]()
         options.append("-a")
         options.append("-A")

@@ -9,8 +9,8 @@ import Foundation
 
 final class Open {
     static func execute() -> String {
-        // ex: open "/Users/[user]/Library/MobileDevice/Provisioning Profiles/"
-        let path = Config.homeDir + "/Library/MobileDevice/Provisioning Profiles/"
+        // ex: open "/Users/[user]/Library/Developer/Xcode/UserData/Provisioning Profiles/"
+        let path = Config.homeDir + "/Library/Developer/Xcode/UserData/Provisioning Profiles/"
         
         guard File.isExist(path: path) else { return "The Directory '\(path)' does not exist." }
         

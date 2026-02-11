@@ -11,7 +11,7 @@ final class Help {
     static func execute() -> String {
         let help = """
         OVERVIEW:
-            Search .mobileprovision file from '~/Library/MobileDevice/Provisioning Profiles/' directory
+            Search .mobileprovision file from '~/Library/Developer/Xcode/UserData/Provisioning Profiles/' directory
         
         USAGE:
             mdpp commands [options] [arguments...]
@@ -30,7 +30,7 @@ final class Help {
             expired   List the expired profiles.
             help      Display help.
             list      List the installed profiles.
-            open      Open '~/Library/MobileDevice/Provisioning Profiles/' directory
+            open      Open '~/Library/Developer/Xcode/UserData/Provisioning Profiles/' directory
             search    List search results from profile name or keywords.
             version   Display version.
         
